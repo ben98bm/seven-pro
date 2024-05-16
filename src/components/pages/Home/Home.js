@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 function Home(){
 
@@ -60,7 +60,6 @@ function Home(){
         // return () => clearInterval(intervalId);
         }
     }, [count]);
-
 
 
     return (
@@ -183,23 +182,23 @@ function Home(){
             <div class="row counters">
 
             <div class="col-lg-3 col-6 text-center">
-                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter">-</span>
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter">+20</span>
                 <p>Clients</p>
             </div>
 
             <div class="col-lg-3 col-6 text-center">
-                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter">-</span>
-                <p>Projects</p>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter">+50</span>
+                <p>Projets</p>
             </div>
 
             <div class="col-lg-3 col-6 text-center">
-                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter">-</span>
-                <p>Hours Of Support</p>
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter">24/24</span>
+                <p>Heures de Travails</p>
             </div>
 
             <div class="col-lg-3 col-6 text-center">
-                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter">-</span>
-                <p>Hard Workers</p>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter">15</span>
+                <p>Nombres de Travailleurs</p>
             </div>
 
             </div>
