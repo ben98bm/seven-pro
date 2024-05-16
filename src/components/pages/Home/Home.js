@@ -60,7 +60,7 @@ function Home(){
         // return () => clearInterval(intervalId);
         }
     }, [count]);
-
+    
 
     return (
     <>
@@ -75,7 +75,7 @@ function Home(){
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Acceuil</a></li>
+                    <li><a class="nav-link scrollto" href="#hero">Acceuil</a></li>
                     <li><a class="nav-link scrollto" href="#about">A Propos</a></li>
                     <li><a class="nav-link scrollto" href="#cta">Nos Services</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
