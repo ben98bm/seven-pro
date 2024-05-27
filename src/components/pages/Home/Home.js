@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 
 function Home(){
 
@@ -61,6 +61,13 @@ function Home(){
         }
     }, [count]);
     
+    const [isNavbarMobile, setIsNavbarMobile] = useState(false);
+    const [isToggleIconList, setIsToggleIconList] = useState(true);
+  
+    const handleToggleClick = () => {
+      setIsNavbarMobile(!isNavbarMobile);
+      setIsToggleIconList(!isToggleIconList);
+    };
 
     return (
     <>
@@ -70,16 +77,16 @@ function Home(){
             <div class="logo">
             {/* <h1 class="text-light"><a href="index.html">7 <span>Pro</span></a></h1> */}
 
-            <a href="index.html"><img src="assets/img/vecteur7pro.png" alt="" class="img-fluid" /></a>
+            <a><img src="assets/img/vecteur7pro.png" alt="" class="img-fluid" /></a>
             </div>
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto" href="#hero">Acceuil</a></li>
+                    <li><a class="nav-link scrollto" href="#hero">Accueil</a></li>
                     <li><a class="nav-link scrollto" href="#about">A Propos</a></li>
                     <li><a class="nav-link scrollto" href="#cta">Nos Services</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-                    <li><a class="getstarted scrollto" href="#about">Commencer</a></li>
+                    <li><a class="getstarted scrollto"><i class='bx bxs-phone-call'></i> +221 77 520 67 37 </a></li>
                 </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
             </nav>
@@ -90,12 +97,16 @@ function Home(){
 
     <section id="hero" class="d-flex align-items-center">
         <div class="container text-center position-relative" data-aos="fade-in" data-aos-delay="200">
-        <h1>Bienvenu Chez 7 Pro</h1>
+        <h1>Bienvenue Chez 7 Pro</h1>
             <h2>
-                Laissez-nous faire briller votre espace 
+                Votre confiance est notre fierte ! <br/>
+                Le bonheur commence par la propreté ! <br/>
+            
+                
+                {/* Laissez-nous faire briller votre espace 
                 de vie ou de travail <br/> avec notre expertise en nettoyage impeccable. <br/>
                 Pour une meilleur productivité dans votre entreprise, maison etc... 
-                <br/>entretenez et nettoyez vos locaux par <span>7 Pro</span>
+                <br/>entretenez et nettoyez vos locaux par <span>7 Pro</span> */}
             </h2>
         <a href="#about" class="btn-get-started scrollto">Commencer ici</a>
         </div>
@@ -144,8 +155,11 @@ function Home(){
             <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
                 <h2>Votre confiance est notre fierte</h2>
                 <h3>
-                    Le bonheur commence par la propreté ! <br/>
-                    La propreté est le garant d’un environnement sain et agréable à vivre
+                    Que vous soyez une entreprise, un établissement de santé, une institution
+                    éducative ou un particulier, nous proposons une gamme complète de services 
+                    de nettoyage pour répondre à vos besoins spécifiques. <br/>De l'entretien régulier 
+                    des locaux au nettoyage en profondeur après travaux, notre équipe expérimentée 
+                    et dévouée est là pour vous offrir un environnement propre, sain et accueillant.
                 </h3>
             </div>
             <div class="col-lg-6 pt-4 pt-lg-0" data-aos="fade-left" data-aos-delay="200">
@@ -259,7 +273,7 @@ function Home(){
 
             <div class="text-center" data-aos="zoom-in">
             <h3>Nos Services</h3>
-                <p> Faites nous confiance pour vous servir dans les meilleures conditions qui garantissent la propreté et le confort..</p>
+                {/* <p> Faites nous confiance pour vous servir dans les meilleures conditions qui garantissent la propreté et le confort..</p> */}
             <a class="cta-btn" href="#services">Voir Plus</a>
             </div>
 
@@ -271,7 +285,7 @@ function Home(){
 
             <div class="row">
             <div class="col-lg-4">
-                <div class="section-title" data-aos="fade-right">
+                {/* <div class="section-title" data-aos="fade-right">
                     <br/>
                 <h2>Plus de details</h2>
                     <p>
@@ -279,40 +293,65 @@ function Home(){
                         <li> Entretien des bureaux : époussetage, aspiration, vidage des poubelles, nettoyage des sols, désinfection des sanitaires ;<br/><br/> </li>
                         <li> Approvisionnement en consommables (ampoules, papier hygiénique, etc.).</li>
                     </p>
+            </div> */}
             </div>
-            </div>
-            <div class="col-lg-8">
+            <div class="col-lg-12">
                 <div class="row">
-                <div class="col-md-6 d-flex align-items-stretch">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon"><i class='bx bxs-factory'></i></div>
+                        {/* <div class="icon"><i class='bx bxs-factory'></i></div> */}
+                        <img src="assets/img/drive/Nettoyage-de-chantier.jpg" class="img-fluid" alt="" />
                             <h4>
                                 <a href="">Nettoyage fin de Chantier</a>
                             </h4>
                                 <p>
-                                    Notre société 7Pro vous propose après vos travaux de construction
+                                    Travaux de construction 
                                     ou de rénovation une remise à neuf des locaux ce qui vous permet
                                     de livrer des locaux propres, sûrs et sains.
                                 </p>
                     </div>
                 </div>
 
-                <div class="col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                     <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="icon"><i class='bx bxs-buildings'></i></div>
+                    {/* <div class="icon"><i class='bx bxs-buildings'></i></div> */}
+                        <img src="assets/img/drive/prix-lave-vitre.jpg" class="img-fluid" alt="" />
                     <h4><a href="">Nettoyage D'immeuble</a></h4>
                     <p>
-                        Cette partie est divisée en deux parties : le nettoyage des parties communes et le nettoyage
-                        des pièces telles que les salons chambres et toilettes. Nous vous proposons des prestations
-                        adaptées pour la propreté et le ménage des parties communes de vos bâtiments d'habitations.
+                        Le nettoyage des parties communes et le nettoyage
+                        des pièces telles que les salons chambres et toilettes. 
                     </p>
                     </div>
                 </div>
 
-                <div class="col-md-6 d-flex align-items-stretch mt-4">
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
                     <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="icon"><i class='bx bxs-chess'></i></div>
+                    {/* <div class="icon"><i class='bx bxs-chess'></i></div> */}
+                        <img src="assets/img/drive/procede-de-nettoyage.jpg" class="img-fluid" alt="" />
                     <h4><a href="">Nettoyage de Tapis</a></h4>
+                    <p>
+                        Méthodes performantes à la monobrosse utilise une brosse rotative mousse sèche et injection extraction.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                    {/* <div class="icon"><i class='bx bxs-bed'></i></div> */}
+                     <img src="assets/img/drive/materiel-nettoyage-mobilier-textile-french-home.jpg" class="img-fluid" alt="" />
+                    <h4><a href="">Nettoyage de Fauteuil</a></h4>
+                    <p>
+                        Nettoyez vos fauteuils chez vous avec des moyens modernes 
+                        de nettoyage qui sauvegarde la qualité du tissu ou cuir.
+                    </p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+                    <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+                    {/* <div class="icon"><i class='bx bxs-chess'></i></div> */}
+                        <img src="assets/img/drive/entreprise-nettoyage-bordeaux33-31.jpg" class="img-fluid" alt="" />
+                    <h4><a href="">Nettoyage de Sol</a></h4>
                     <p>
                         7 Pro est aussi spécialisée en entretien et nettoyage de tapis et moquettes.
                         Nous intervenons pour nettoyer, détacher et désinfecter vos tapis grâce à des méthodes
@@ -321,10 +360,11 @@ function Home(){
                     </div>
                 </div>
 
-                <div class="col-md-6 d-flex align-items-stretch mt-4">
+                <div class="col-lg-4 col-md-6d-flex align-items-stretch mt-4">
                     <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="icon"><i class='bx bxs-bed'></i></div>
-                    <h4><a href="">Nettoyage de Fauteuil</a></h4>
+                    {/* <div class="icon"><i class='bx bxs-bed'></i></div> */}
+                        <img src="assets/img/drive/nettoyage-bureau-paris-08.jpg" class="img-fluid" alt="" />
+                    <h4><a href="">Nettoyage de Bureaux</a></h4>
                     <p>
                         7 Pro vous propose un nettoyage de vos fauteuils, canapés, sofa,
                         chaises en tissu ou en cuir. Nous pouvons nettoyer vos fauteuils chez vous a
@@ -340,99 +380,13 @@ function Home(){
         </div>
         </section>
 
-        <section id="portfolio" class="portfolio">
-        <div class="container">
-
-            <div class="section-title" data-aos="fade-left">
-            <h2>Portfolio</h2>
-                <p>
-                    Que vous soyez une entreprise, un établissement de santé, une institution
-                    éducative ou un particulier, nous proposons une gamme complète de services 
-                    de nettoyage pour répondre à vos besoins spécifiques. De l'entretien régulier 
-                    des locaux au nettoyage en profondeur après travaux, notre équipe expérimentée 
-                    et dévouée est là pour vous offrir un environnement propre, sain et accueillant.
-                </p>
-            </div>
-
-            <div class="row" data-aos="fade-up" data-aos-delay="100">
-            <div class="col-lg-12 d-flex justify-content-center">
-                <ul id="portfolio-flters">
-                <li data-filter="*" class="filter-active">All</li>
-                {/* <li data-filter=".filter-app">App</li>
-                <li data-filter=".filter-card">Card</li>
-                <li data-filter=".filter-web">Web</li> */}
-                </ul>
-            </div>
-            </div>
-
-            <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                <img src="assets/img/drive/machine-a-recurer-les-sols.jpg" class="img-fluid" alt="" />
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                <img src="assets/img/drive/csm_cleanliness.jpg" class="img-fluid" alt="" />
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                <img src="assets/img/drive/Depositphotos.jpg" class="img-fluid" alt="" />
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                <img src="assets/img/drive/entreprise-nettoyage-bordeaux33-31.jpg" class="img-fluid" alt="" />
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                <img src="assets/img/drive/istockphoto-1366273982-612x612.jpg" class="img-fluid" alt="" />
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <div class="portfolio-wrap">
-                <img src="assets/img/drive/materiel-nettoyage-mobilier-textile-french-home.jpg" class="img-fluid" alt="" />
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                <img src="assets/img/drive/nettoyage-canape-a-domicile-10.jpg" class="img-fluid" alt="" />
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <div class="portfolio-wrap">
-                <img src="assets/img/drive/Nettoyage-de-chantier.jpg" class="img-fluid" alt="" />
-                </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <div class="portfolio-wrap">
-                <img src="assets/img/drive/nettoyant-pour-vitres.jpg" class="img-fluid" alt="" />
-                </div>
-            </div>
-
-            </div>
-
-        </div>
-        </section>
-
         <section id="team" class="team">
         <div class="container">
 
             <div class="row">
             <div class="col-lg-4">
-                <div class="section-title" data-aos="fade-right">
-                <h2>Nettoyage Prestige</h2>
+                <div class="section-titlee" data-aos="fade-right">
+                <h2>Prestige du Nettoyage Professionel</h2>
                 <p>Excellence et Soin à Chaque Détail</p>
                 </div>
             </div>
@@ -460,8 +414,9 @@ function Home(){
                     <div class="member" data-aos="zoom-in" data-aos-delay="200">
                     <div class="pic"><img src="assets/img/drive/nettoyage-immeuble.jpg" class="img-fluid" alt="" /></div>
                     <div class="member-info">
-                        <h4>Votre Partenaire pour un Environnement Sain</h4>
+                        <h4>Environnement Sain</h4>
                         <p>
+                            <br/>
                             "La santé et le bien-être de nos clients sont au cœur de nos priorités. Avec 
                             7 Pro, bénéficiez de solutions de nettoyage sur mesure, conçues 
                             our créer des espaces où il fait bon vivre et travailler. Faites confiance à notre 
@@ -475,9 +430,9 @@ function Home(){
 
                 <div class="col-lg-6 mt-4">
                     <div class="member" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="pic"><img src="assets/img/drive/procede-de-nettoyage.jpg" class="img-fluid" alt="" /></div>
+                    <div class="pic"><img src="assets/img/drive/x-astuces-pour-bien-laver-un-tapis.jpg" class="img-fluid" alt="" /></div>
                     <div class="member-info">
-                        <h4>Des Espaces Propres, des Clients Satisfaits</h4>
+                        <h4>Espaces Propres</h4>
                         <p>
                             "La satisfaction de nos clients est notre plus grande récompense. À 7 Pro, 
                             nous offrons des services de nettoyage de haute qualité qui répondent à vos besoins spécifiques. 
@@ -494,7 +449,7 @@ function Home(){
                     <div class="member" data-aos="zoom-in" data-aos-delay="400">
                     <div class="pic"><img src="assets/img/drive/nettoyage-canape.jpg" class="img-fluid" alt="" /></div>
                     <div class="member-info">
-                        <h4>L'Excellence en Nettoyage à Votre Service</h4>
+                        <h4>L'Excellence en Nettoyage</h4>
                         <p>
                             "Pour 7Pro, l'excellence est une valeur fondamentale. Nos services 
                             de nettoyage sont conçus pour surpasser vos attentes, avec des solutions innovantes et
