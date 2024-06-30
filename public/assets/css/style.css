@@ -542,6 +542,12 @@ section {
   font-family: Georgia, serif;
 }
 
+.section-title p {
+  margin-bottom: 0;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
 /*--------------------------------------------------------------
 # Clients
 --------------------------------------------------------------*/

@@ -353,9 +353,8 @@ function Home(){
                         <img src="assets/img/drive/entreprise-nettoyage-bordeaux33-31.jpg" class="img-fluid" alt="" />
                     <h4><a href="">Nettoyage de Sol</a></h4>
                     <p>
-                        7 Pro est aussi spécialisée en entretien et nettoyage de tapis et moquettes.
-                        Nous intervenons pour nettoyer, détacher et désinfecter vos tapis grâce à des méthodes
-                        performantes à la monobrosse mousse sèche et injection extraction.
+                        Pour bien laver vos sols il faut un bon choix des nettoyants 
+                        pour le sol et le matériel de lavage adéquat.
                     </p>
                     </div>
                 </div>
@@ -366,9 +365,8 @@ function Home(){
                         <img src="assets/img/drive/nettoyage-bureau-paris-08.jpg" class="img-fluid" alt="" />
                     <h4><a href="">Nettoyage de Bureaux</a></h4>
                     <p>
-                        7 Pro vous propose un nettoyage de vos fauteuils, canapés, sofa,
-                        chaises en tissu ou en cuir. Nous pouvons nettoyer vos fauteuils chez vous a
-                        vec des moyens modernes de nettoyage qui sauvegarde la qualité du tissu ou cuir.
+                        Nettoyage de de bureaux : nettoyage des surfaces, vidage 
+                        des poubelles, époussetage du mobilier…
                     </p>
                     </div>
                 </div>
