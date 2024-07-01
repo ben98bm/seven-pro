@@ -492,7 +492,7 @@ function Home(){
                     <div class="info">
                     <i class="bi bi-envelope"></i>
                     <h4>Email :</h4>
-                    <p>contact@7pro.com</p>
+                    <p>contact@7pro.sn</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
